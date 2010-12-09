@@ -1,6 +1,6 @@
 package Log::Structured;
 BEGIN {
-  $Log::Structured::VERSION = '0.001000';
+  $Log::Structured::VERSION = '0.001001';
 }
 
 # ABSTRACT: Log events in a structured manner
@@ -142,7 +142,7 @@ Log::Structured - Log events in a structured manner
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

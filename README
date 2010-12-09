@@ -2,7 +2,7 @@ NAME
     Log::Structured - Log events in a structured manner
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
      use Log::Structured;
