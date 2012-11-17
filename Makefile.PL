@@ -4,32 +4,32 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Log events in a structured manner',
-  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "Log events in a structured manner",
+  "AUTHOR" => "Arthur Axel \"fREW\" Schmidt <frioux+cpan\@gmail.com>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Log-Structured',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Log::Structured',
-  'PREREQ_PM' => {
-    'Moo' => '0',
-    'Test::Deep' => '0.88',
-    'Test::Fatal' => '0.88',
-    'Test::More' => '0.88',
-    'Time::HiRes' => '0',
-    'strictures' => '0'
+  "DISTNAME" => "Log-Structured",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Log::Structured",
+  "PREREQ_PM" => {
+    "Moo" => 0,
+    "Test::Deep" => "0.88",
+    "Test::Fatal" => "0.88",
+    "Test::More" => "0.88",
+    "Time::HiRes" => 0,
+    "strictures" => 0
   },
-  'VERSION' => '0.001001',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.001002",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

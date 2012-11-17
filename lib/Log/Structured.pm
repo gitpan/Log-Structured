@@ -1,6 +1,6 @@
 package Log::Structured;
-BEGIN {
-  $Log::Structured::VERSION = '0.001001';
+{
+  $Log::Structured::VERSION = '0.001002';
 }
 
 # ABSTRACT: Log events in a structured manner
@@ -132,8 +132,8 @@ sub _sound_depth {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -142,7 +142,7 @@ Log::Structured - Log events in a structured manner
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
@@ -341,10 +341,9 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
