@@ -21,18 +21,32 @@ my %WriteMakefileArgs = (
   "NAME" => "Log::Structured",
   "PREREQ_PM" => {
     "Moo" => 0,
-    "Test::Deep" => "0.88",
-    "Test::Fatal" => "0.88",
+    "Test::Deep" => "0.110",
+    "Test::Fatal" => "0.010",
     "Test::More" => "0.88",
     "Time::HiRes" => 0,
     "strictures" => 0
   },
-  "VERSION" => "0.001002",
+  "TEST_REQUIRES" => {},
+  "VERSION" => "0.001003",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
